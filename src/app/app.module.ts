@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonInfoComponent } from './person-info/person-info.component';
 import { PaymentsComponent } from './payments/payments.component';
+import { PaymentsOptionComponent } from './payments/payments-option/payments-option.component';
+import { PaymentsRequestComponent } from './payments/payments-request/payments-request.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonInfoComponent,
-    PaymentsComponent
+    PaymentsComponent,
+    PaymentsOptionComponent,
+    PaymentsRequestComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentsComponent implements OnInit {
 
+
+  loadedFeature = 'payments-pay/by-card';
+
+    onNavigate(feature: string) {
+        this.loadedFeature = feature;
+    }
   constructor() { }
 
   ngOnInit() {
