@@ -7,6 +7,7 @@ import { PersonInfoComponent } from './person-info/person-info.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { PaymentsOptionComponent } from './payments/payments-option/payments-option.component';
 import { PaymentsRequestComponent } from './payments/payments-request/payments-request.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PaymentsRequestComponent } from './payments/payments-request/payments-r
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
