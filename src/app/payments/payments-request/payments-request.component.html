@@ -59,7 +59,7 @@
                      type="text" id="phone_n" name="phone_n"
                      ngModel
                      placeholder="+7"
-                     pattern="^+7[0-9]{10}$"
+                    
                      required>
           </div>
       </div>
@@ -71,15 +71,15 @@
                  ngModel                 
                  required>
       </div>
-      <div class="custom-botton">
+      <div class="custom-accept-button">
           <button class="button" type="submit" [disabled]="!f.valid">
               <span class="button-text">Создать платеж</span>
           </button>
           <img src="https://static.tildacdn.com/tild3464-3130-4365-a233-613965613735/BUTTON_1.png"
                class="button_img" width="230px" height="70px">
       </div>
-      <!-- <div class="clear-form-button__wrapper">
+      <div class="custom-clear-form-button">
           <button type="button" class="clear-form-button" (click)="onClear(f)">Очистить форму</button>
-      </div>  -->
+      </div> 
   </form>
 </div>
