@@ -10,13 +10,6 @@
     }
 }
 
-/* @media screen and (min-width: 1100px) and (max-width: 1199px) {
-    .main {
-        width: 1100px;
-        margin: auto;
-    }
-} */
-
 @media screen and (min-width: 1px) and (max-width: 1099px) {
     .main {
         width: 100%;

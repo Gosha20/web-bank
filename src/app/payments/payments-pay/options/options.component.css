@@ -6,7 +6,7 @@
     font-weight: bold;
 }
 
-.active__wrapper
+.elem
 {
     padding: 4px 10px 4px 0;
     border-radius: 2px;
@@ -23,11 +23,16 @@
 }
 
 
-.link_blue_yes,
-.link_blue_yes:visited {
+.link_blue:hover,
+.link_blue:visited {
     color: #0c75c4;
 }
 
-.link_blue_yes:hover {
+.link_blue:hover {
     color: #408AD2;
+}
+.active a
+{
+    color: black;
+    cursor: auto;
 }

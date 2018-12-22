@@ -3,7 +3,7 @@
       Создайте платёжку, а {{person.company}} {{person.name}} подпишет её у себя в
       интернет-банке
   </div>
-  <form (ngSubmit)="onSubmit(f)" #f='ngForm' class="form">
+  <form (ngSubmit)="onSubmit(myForm)" #myForm='ngForm' class="form">
       <div class="form-elem">
           <label for="inn" class="form-label">ИНН получателя</label>
           <input class="form-input"
@@ -26,7 +26,7 @@
       <div class="form-elem">
           <label for="account-number" class="form-label">Номер счёта</label>
           <input class="form-input"
-                 type="text" id="account-number" name="account-number"
+                 type="text" id="account-number" name="accountNumber"
                  ngModel
                  maxlength="20"
                  pattern="^[0-9]{20}$"
@@ -56,7 +56,7 @@
           <label for="phone" class="form-label">Номер телефона</label>
           <div>
               <input class="form-input"
-                     type="text" id="phone_n" name="phone_n"
+                     type="text" id="phone_n" name="phoneNumber"
                      ngModel
                      placeholder="+7"
                     
@@ -72,7 +72,7 @@
                  required>
       </div>
       <div class="custom-accept-button">
-          <button class="button" type="submit" [disabled]="!f.valid">
+          <button class="button" type="submit" [disabled]="!myForm.valid">
               <span class="button-text">Создать платеж</span>
           </button>
           <img src="https://static.tildacdn.com/tild3464-3130-4365-a233-613965613735/BUTTON_1.png"
