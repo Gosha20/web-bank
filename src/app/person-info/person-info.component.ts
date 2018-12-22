@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
-import {User} from './user';
+import { User } from './user';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-person-info',
@@ -11,12 +11,9 @@ import {User} from './user';
 export class PersonInfoComponent implements OnInit {
   public person: User;
 
-  constructor(private http: HttpClient) { 
-    
-  }
+  constructor(public httpService: HttpServiceService) {}
 
   ngOnInit() {
-    this.http.get('http://localhost:5000/bank/user').subscribe((data:User) => this.person=data);
+    this.httpService.getUser().subscribe((data: User) => this.person = data);
   }
-
 }
