@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpServiceService } from 'src/app/http-service.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-by-card',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ByCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public httpService: HttpServiceService) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onSubmit(form: NgForm) {
+    var paymentCard = form.value;
+    console.log(paymentCard);
+    this.httpService.addPaymentCard(paymentCard).subscribe(
+      (response: any) => { console.log(response); }
+    );
+    form.reset();
   }
 
 }
