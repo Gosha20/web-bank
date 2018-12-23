@@ -13,6 +13,7 @@ import { ByCardComponent } from './payments/payments-pay/by-card/by-card.compone
 import { ByInternetBankComponent } from './payments/payments-pay/by-internet-bank/by-internet-bank.component';
 import { OptionsComponent } from './payments/payments-pay/options/options.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     ByCardComponent,
     ByInternetBankComponent,
     OptionsComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
