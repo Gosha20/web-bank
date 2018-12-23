@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public person: Object;
   constructor() { }
 
   ngOnInit() {
+    this.person = {
+      name: "Швецова Мария Марияевна",
+      company: "Индивидуальный предприниматель",
+      site: "www.t.com",
+      email: "t@t"
+    };
   }
 
 }

@@ -1,7 +1,12 @@
 <app-options></app-options>
 <div class="main-container">
   <form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <div class="card">        
+    <div class="card">
+      <div class="logos">
+          <img src="../../../../assets/visa.png" height="15" width="43" class="visa-logo">
+          <img src="../../../../assets/mastercard.png" height="25" width="33"/>
+          <img src="../../../../assets/maestro.png" height="25" width="33"/>
+      </div>        
       <div class="form-elem">
           <input class="form-input card-number"
           type="text" name="cardNumber" id="card-number" 
@@ -55,7 +60,7 @@
                    placeholder="До 150 символов"
                    ngModel
                    maxlength="150"
-                   pattern="^.*$"
+                   pattern="^[A-Za-z]*$"
                    required>
         </div>
         <div class="form-elem">
