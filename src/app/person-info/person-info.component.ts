@@ -9,11 +9,18 @@ import { HttpServiceService } from '../http-service.service';
 })
 
 export class PersonInfoComponent implements OnInit {
-  public person: User;
+  public person: Object;
 
   constructor(public httpService: HttpServiceService) {}
 
   ngOnInit() {
-    this.httpService.getUser().subscribe((data: User) => this.person = data);
+    this.person = {
+      name: "Швецова Мария Марияевна",
+      company: "Индивидуальный предприниматель",
+      site: "www.t.com",
+      email: "t@t"
+    };
+
+    // this.httpService.getUser().subscribe((data: User) => this.person = data);
   }
 }

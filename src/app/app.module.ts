@@ -12,6 +12,7 @@ import { PaymentsPayComponent } from './payments/payments-pay/payments-pay.compo
 import { ByCardComponent } from './payments/payments-pay/by-card/by-card.component';
 import { ByInternetBankComponent } from './payments/payments-pay/by-internet-bank/by-internet-bank.component';
 import { OptionsComponent } from './payments/payments-pay/options/options.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { OptionsComponent } from './payments/payments-pay/options/options.compon
     PaymentsPayComponent,
     ByCardComponent,
     ByInternetBankComponent,
-    OptionsComponent
+    OptionsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
