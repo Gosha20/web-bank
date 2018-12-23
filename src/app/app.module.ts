@@ -15,6 +15,7 @@ import { OptionsComponent } from './bank/payments/payments-pay/options/options.c
 import { FooterComponent } from './bank/footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { BankComponent } from './bank/bank.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BankComponent } from './bank/bank.component';
     OptionsComponent,
     FooterComponent,
     LoginComponent,
-    BankComponent
+    BankComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
