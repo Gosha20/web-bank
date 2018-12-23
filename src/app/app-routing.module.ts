@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-
-import { PaymentsRequestComponent } from './payments/payments-request/payments-request.component';
-import { PaymentsPayComponent } from './payments/payments-pay/payments-pay.component';
-import {ByCardComponent} from './payments/payments-pay/by-card/by-card.component';
-import {ByInternetBankComponent} from './payments/payments-pay/by-internet-bank/by-internet-bank.component'
+import { PaymentsRequestComponent } from './bank/payments/payments-request/payments-request.component';
+import {ByCardComponent} from './bank/payments/payments-pay/by-card/by-card.component';
+import {ByInternetBankComponent} from './bank/payments/payments-pay/by-internet-bank/by-internet-bank.component'
 import { LoginComponent } from './login/login.component';
+import { BankComponent } from './bank/bank.component';
+import { PaymentsPayComponent } from './bank/payments/payments-pay/payments-pay.component';
+
 const routes: Routes = [
-  {path:"", redirectTo: 'payments-pay/by-card', pathMatch: "full"},
-  {path: "payments-request", component: PaymentsRequestComponent},
-  {path: "payments-pay",  redirectTo: 'payments-pay/by-card', pathMatch: "full"},
-  {path: "payments-pay/by-card", component: ByCardComponent},
-  {path: "payments-pay/by-internet-bank", component: ByInternetBankComponent},
-  {path: "login", component: LoginComponent, pathMatch: "full"}
+  {path:"", redirectTo: 'bank/payments-pay/by-card', pathMatch: "full"},
+  {path: "bank/payments-pay", redirectTo: "bank/payments-pay/by-card", pathMatch: "full"},
+  { path: 'bank', component: BankComponent, children: [
+    { path: 'payments-request', component: PaymentsRequestComponent },
+    { path: 'payments-pay', component: PaymentsPayComponent, children: [
+            { path: 'by-card', component: ByCardComponent },
+            { path: 'by-internet-bank', component: ByInternetBankComponent }
+        ]}]}
 ];
 
 @NgModule({

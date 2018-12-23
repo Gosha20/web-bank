@@ -3,7 +3,7 @@
       Создайте платёжку, а {{person.company}} {{person.name}} подпишет её у себя в
       интернет-банке
   </div>
-  <form (ngSubmit)="onSubmit(myForm)" #myForm='ngForm' class="form">
+  <form (ngSubmit)="onSubmit(f)" #f='ngForm' class="form">
       <div class="form-elem">
           <label for="inn" class="form-label">ИНН получателя</label>
           <input class="form-input"
@@ -72,14 +72,14 @@
                  required>
       </div>
       <div class="custom-accept-button">
-          <button class="button" type="submit" [disabled]="!myForm.valid">
+          <button class="button" type="submit" [disabled]="!f.valid">
               <span class="button-text">Создать платеж</span>
           </button>
           <img src="https://static.tildacdn.com/tild3464-3130-4365-a233-613965613735/BUTTON_1.png"
                class="button_img" width="230px" height="70px">
       </div>
       <div class="custom-clear-form-button">
-          <button type="button" class="clear-form-button" (click)="onClear(f)">Очистить форму</button>
+          <button type="button" class="clear-form-button" (click)="onClean(f)">Очистить форму</button>
       </div> 
   </form>
 </div>
